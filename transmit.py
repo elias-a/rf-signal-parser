@@ -1,4 +1,5 @@
 import sys
+import pathlib
 import time
 import RPi.GPIO as GPIO
 
@@ -6,11 +7,13 @@ if len(sys.argv) < 2:
     print("Usage: python transmit.py [action]")
     sys.exit()
 
+directory = pathlib.Path(__file__).parent.resolve()
+
 action = sys.argv[1]
-with open(f"{action}-sequence.txt", "r") as f:
+with open(f"{directory}/{action}-sequence.txt", "r") as f:
     code = f.read()
 
-with open("timing.txt", "r") as f:
+with open(f"{directory}/timing.txt", "r") as f:
     shortTime = float(f.readline())
     longTime = float(f.readline())
     delayTime = float(f.readline())
