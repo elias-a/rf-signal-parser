@@ -4,7 +4,7 @@ import time
 import RPi.GPIO as GPIO
 
 if len(sys.argv) < 2:
-    print("Usage: python transmit.py [action]")
+    print("Usage: python transmit.py action")
     sys.exit()
 
 directory = pathlib.Path(__file__).parent.resolve()

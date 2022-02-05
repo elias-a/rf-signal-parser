@@ -38,7 +38,7 @@ def receiveData(action):
         pickle.dump(receivedInput, f)
 
 if len(sys.argv) < 2:
-    print("Usage: python receive.py [action]")
+    print("Usage: python receive.py action")
     sys.exit()
 
 # Receive signal or read signal data from file. 
