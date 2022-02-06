@@ -26,6 +26,8 @@ To start the analysis portion, the script splits the signal into consecutive on 
 
 The script outputs two files, one containing the sequence and the other containing the timing information.
 
+![Example Output](./examples/output.png)
+
 ## Transmit signal
 
 To transmit a RF signal that's been previously recorded, attach a RF transmitter to a Raspberry Pi, ensuring the data pin is connected to pin 2. Then run
